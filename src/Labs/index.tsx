@@ -7,7 +7,7 @@ export default function Labs() {
     return (
         <div id="wd-labs">
             <h1>Labs</h1>
-            <h2>Jiachen Liang 5610Fa24</h2>
+            <h2>Jiachen Liang CS5610Fa24</h2>
             <TOC />
             <Routes>
                 <Route path="/" element={<Navigate to="Lab1" />} />
