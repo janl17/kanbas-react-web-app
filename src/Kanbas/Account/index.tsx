@@ -10,7 +10,7 @@ export default function Account() {
     <div id="wd-account-screen">
         
       <h2>Account</h2>
-      <Signin />
+      {/*<Signin />*/}
       <table>
         <tr>
           <td valign="top">
