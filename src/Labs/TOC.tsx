@@ -1,24 +1,25 @@
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
+
 export default function TOC() {
-    return (
-        <ul>
-            <li><Link to="/Labs">Labs</Link></li>
-            <li><Link to="/Labs/Lab1">Lab 1</Link></li>
-            <li><Link to="/Labs/Lab2">Lab 2</Link></li>
-            <li><Link to="/Labs/Lab3">Lab 3</Link></li>
-            <li><Link to="/Kanbas">Kanbas</Link></li>
-            <li>
-                <a
-                    id="wd-github"
-                    href="https://github.com/janl17/kanbas-react-web-app"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    View this project on GitHub
-                </a>
-            </li>
-        </ul>
-        );
+    // return (
+        // <ul>
+        //     <li><Link to="/Labs">Labs</Link></li>
+        //     <li><Link to="/Labs/Lab1">Lab 1</Link></li>
+        //     <li><Link to="/Labs/Lab2">Lab 2</Link></li>
+        //     <li><Link to="/Labs/Lab3">Lab 3</Link></li>
+        //     <li><Link to="/Kanbas">Kanbas</Link></li>
+        //     <li>
+        //         <a
+        //             id="wd-github"
+        //             href="https://github.com/janl17/kanbas-react-web-app"
+        //             target="_blank"
+        //             rel="noopener noreferrer">
+        //             View this project on GitHub
+        //         </a>
+        //     </li>
+        // </ul>
+        // );
     const { pathname } = useLocation();
     return (
         <ul className="nav nav-pills">
@@ -51,7 +52,7 @@ export default function TOC() {
                 </a>
             </li>
             <li className="nav-item">
-                <a id="wd-k" href="https://github.com/jannunzi" className="nav-link">
+                <a id="wd-k" href="https://github.com/janl17/kanbas-react-web-app" className="nav-link">
                     My GitHub
                 </a>
             </li>

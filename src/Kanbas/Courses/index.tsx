@@ -1,34 +1,37 @@
-import { Routes, Route } from 'react-router-dom';
-import { FaAlignJustify } from 'react-icons/fa'; // Import the icon
 import CoursesNavigation from './Navigation';
 import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
-
 import PeopleTable from "./People/Table";
-
+import { courses } from "../Database";
+import { FaAlignJustify } from "react-icons/fa6";
+import { Route, Routes, useParams, useLocation } from "react-router";
 
 export default function Courses() {
+    const { cid } = useParams(); // Using cid as course ID
+    const course = courses.find((course) => course._id === cid); // Finding course by cid
+    const { pathname } = useLocation();
+
     return (
         <div id="wd-courses">
             <h2 className="text-danger">
-                <FaAlignJustify className="me-4 fs-4 mb-1"/>
-                Course 1234
+                <FaAlignJustify className="me-4 fs-4 mb-1" />
+                {course && course.name} &gt; {pathname.split("/")[4]}
             </h2>
-            <hr/>
+            <hr />
             <div className="d-flex">
                 <div className="d-none d-md-block">
-                    <CoursesNavigation/>
+                    <CoursesNavigation />
                 </div>
                 <div className="wd-main-content-offset p-3">
                     <Routes>
-                        <Route path="Home" element={<Home/>}/>
-                        <Route path="Modules" element={<Modules/>}/>
-                        <Route path="Assignments" element={<Assignments/>}/>
-                        <Route path="Assignments/:aid" element={<AssignmentEditor/>}/>
-                        <Route path="People" element={<PeopleTable/>}/>
-
+                        <Route path="Home" element={<Home />} />
+                        <Route path="Modules" element={<Modules />} />
+                        <Route path="Assignments" element={<Assignments />} />
+                        {/* AssignmentEditor route should include both cid and aid */}
+                        <Route path="Assignments/:aid" element={<AssignmentEditor />} />
+                        <Route path="People" element={<PeopleTable />} />
                     </Routes>
                 </div>
             </div>

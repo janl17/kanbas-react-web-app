@@ -1,0 +1,11 @@
+[
+  { "_id": "A101", "title": "Propulsion Assignment", "course": "RS101", "description": "Analyze different propulsion systems and their efficiency." },
+  { "_id": "A102", "title": "Combustion Analysis", "course": "RS101", "description": "Study the combustion process and calculate energy outputs." },
+  { "_id": "A103", "title": "Nozzle Design Project", "course": "RS101", "description": "Design a nozzle for efficient gas flow in aerospace applications." },
+  { "_id": "A201", "title": "Aerodynamics Quiz", "course": "RS102", "description": "Test your knowledge of aerodynamics principles." },
+  { "_id": "A202", "title": "Flow Analysis", "course": "RS102", "description": "Analyze different fluid flow patterns and predict performance." },
+  { "_id": "A203", "title": "Heating Analysis", "course": "RS102", "description": "Evaluate heating effects on different materials under stress." },
+  { "_id": "A301", "title": "Structural Design Task", "course": "RS103", "description": "Design a structural element for high-load endurance." },
+  { "_id": "A302", "title": "Orbital Calculations", "course": "RS103", "description": "Calculate orbital parameters for a satellite launch." },
+  { "_id": "A303", "title": "Systems Engineering Exam", "course": "RS103", "description": "Test your understanding of systems engineering concepts." }
+]
