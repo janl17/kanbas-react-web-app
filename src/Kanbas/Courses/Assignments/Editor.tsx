@@ -1,129 +1,128 @@
+import Form from 'react-bootstrap/Form';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import { useParams, useLocation } from "react-router";
+import { useState } from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import { updateAssignment } from './reducer';
+import { useNavigate } from "react-router-dom";
+
+
+
+
+
+
+
 export default function AssignmentEditor() {
+  const navigate = useNavigate();
+  const { aid } = useParams();
+  const { pathname } = useLocation();
+  // const assignments = db.assignments;
+
+  const { assignments } = useSelector((state: any) => state.assignmentReducer);
+  const dispatch = useDispatch();
+  const dbAssignment = assignments.find((a: any) => a._id === aid);
+
+  const [assignment, setAssignment] = useState(
+    dbAssignment || {
+      _id: "",
+      title: "",
+      course: "",
+      description: ""
+    }
+  );
+
+
+  const handleSave = (e: any) => {
+    e.preventDefault();
+    // TODO: Save assignment 
+    dispatch(updateAssignment(assignment));
+    navigate(`/Kanbas/Courses/${pathname.split("/")[3]}/Assignments`);
+    // console.log(assignments)
+
+
+
+  }
   return (
     <div id="wd-assignments-editor">
-      <label htmlFor="wd-name">Assignment Name</label>
-      <input id="wd-name" value="A1 - ENV + HTML" /><br /><br />
+      <Form>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Assignment Name</Form.Label>
+          <Form.Control type="email" placeholder=""
+            defaultValue={assignment?.title}
+            onChange={(e) => setAssignment({ ...assignment, title: e.target.value })}
+          />
 
-      <textarea id="wd-description">
-        The assignment is available online. Submit a link to the landing page of
-      </textarea>
+
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+
+          <Form.Control as="textarea" rows={3} cols={50}
+            defaultValue={assignment?.description}
+            onChange={(e) => setAssignment({ ...assignment, description: e.target.value })}
+          />
+        </Form.Group>
+
+      </Form>
+
+
       <br />
 
-      <table>
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-points">Points</label>
-          </td>
-          <td>
-            <input id="wd-points" value={100} />
-          </td>
-        </tr>
 
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-group">Group Assignment</label>
-          </td>
-          <td>
-            <input id="wd-group" type="checkbox" />
-          </td>
-        </tr>
 
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-display-grade-as">Display Grade As</label>
-          </td>
-          <td>
-            <select id="wd-display-grade-as">
-              <option value="percentage">Percentage</option>
-              <option value="points">Points</option>
-            </select>
-          </td>
-        </tr>
+      <Form>
+        <Form.Group as={Row} className="mb-5 " controlId="formPoints">
+          <Form.Label column sm={5} align="right">
+            Points
+          </Form.Label>
+          <Col sm={5}>
+            <Form.Control type=" " placeholder=" " defaultValue={"100"} />
+          </Col>
+        </Form.Group>
 
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-submission-type">Submission Type</label>
-          </td>
-          <td>
-            <select id="wd-submission-type">
-              <option value="online">Online</option>
-              <option value="paper">Paper</option>
-            </select>
-          </td>
-        </tr>
+        <Form.Group as={Row} className="mb-5 " controlId="formPoints">
+          <Form.Label column sm={5} align="right">
+            Assign
+          </Form.Label >
+          
+          <Col sm={5} className="border border-secondary rounded  pb-3"  >
 
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-text-entry">Text Entry</label>
-          </td>
-          <td>
-            <input id="wd-text-entry" type="checkbox" />
-          </td>
-        </tr>
+            <Form.Label column sm={5} align="left">
+              Due date
+            </Form.Label>
+            <Form.Control type="datetime-local" />
+            
+            <Form.Label column sm={5} align="left">
+              Avalible from
+            </Form.Label>
+            <Form.Control type="datetime-local" />
+            <Form.Label column sm={5} align="left">
+              Util
+            </Form.Label>
+            <Form.Control type="datetime-local" />
 
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-website-url">Website URL</label>
-          </td>
-          <td>
-            <input id="wd-website-url" type="checkbox" />
-          </td>
-        </tr>
 
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-media-recordings">Media Recordings</label>
-          </td>
-          <td>
-            <input id="wd-media-recordings" type="checkbox" />
-          </td>
-        </tr>
+          </Col></Form.Group>
 
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-file-upload">File Upload</label>
-          </td>
-          <td>
-            <input id="wd-file-upload" type="checkbox" />
-          </td>
-        </tr>
 
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-assign-to">Assign To</label>
-          </td>
-          <td>
-            <input id="wd-assign-to" type="text" placeholder="Enter group or student" />
-          </td>
-        </tr>
 
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-due-date">Due Date</label>
-          </td>
-          <td>
-            <input id="wd-due-date" type="date" />
-          </td>
-        </tr>
 
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-available-from">Available From</label>
-          </td>
-          <td>
-            <input id="wd-available-from" type="date" />
-          </td>
-        </tr>
+      </Form>
+      
+      <button id="wd-add-module-btn" className="btn btn-lg btn-danger me-1 float-end" onClick={handleSave}>
 
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-available-until">Available Until</label>
-          </td>
-          <td>
-            <input id="wd-available-until" type="date" />
-          </td>
-        </tr>
-      </table>
+        Save</button>
+      <a href={`#/Kanbas/Courses/${pathname.split("/")[3]}/Assignments`}>
+
+        <button id="wd-add-module-btn" className="btn btn-lg btn-secondary me-1 float-end">
+
+          Cancel</button>
+      </a>
+
+
+
+
     </div>
   );
 }
