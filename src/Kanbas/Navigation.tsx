@@ -30,7 +30,7 @@ export default function KanbasNavigation() {
       <a href="https://www.northeastern.edu/" id="wd-neu-link" className="list-group-item bg-black border-0 text-center">
         <img src="/images/NU_logo.png" alt="Nu logo" width="75px" /></a>
 
-{/*
+{/* 
       <NavLink to="/Kanbas/Account" id="wd-account-link"
         className={({ isActive }) => isActive ? "list-group-item text-center border-0 bg-white text-danger" : "list-group-item text-center border-0 bg-black text-white"}
 
@@ -72,7 +72,7 @@ export default function KanbasNavigation() {
 
       > <FaGear className=" fs-1 text-danger" /><br />
         Labs</NavLink> */}
-
+        
       <Link to="/Kanbas/Account" className={`list-group-item text-center border-0 bg-black
             ${pathname.includes("Account") ? "bg-white text-danger" : "bg-black text-white"}`}>
         <FaRegCircleUser className={`fs-1 ${pathname.includes("Account") ? "text-danger" : "text-white"}`} />

@@ -14,6 +14,7 @@ import AssignmentConfirm from "./AssignmentConfirm";
 export default function Assignments() {
 
   const { cid } = useParams();
+  
   // assignment from database
   // const assignments = db.assignments;
   // user from state
@@ -24,22 +25,22 @@ export default function Assignments() {
 
   const dispatch = useDispatch();
 
-  const handleDelete = (assignmentId: string) => {
+  // const handleDelete = (assignmentId: string) => {
 
-    const isConfirmed = window.confirm("Are you sure you want to delete this assignment?");
+  //   const isConfirmed = window.confirm("Are you sure you want to delete this assignment?");
 
-    // If the user clicks "OK", delete the assignment
-    if (isConfirmed) {
-      dispatch(deleteAssignment(assignmentId));
-    }
-    // dispatch(deleteAssignment(assignmentId));
-  }
+  //   // If the user clicks "OK", delete the assignment
+  //   if (isConfirmed) {
+  //     dispatch(deleteAssignment(assignmentId));
+  //   }
+  //   // dispatch(deleteAssignment(assignmentId));
+  // }
 
 
   return (
     <div id="wd-assignments" className="container">
 
-      <AssignmentControl />
+      <AssignmentControl courseId={cid}/>
       <br />
       <br />
       <br />
