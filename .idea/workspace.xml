@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b18130f0-25ae-4d9c-8334-c926ba840113" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Hello.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kanbas/Account/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kanbas/Account/Profile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kanbas/Account/Signin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kanbas/Account/Signin.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kanbas/Account/Signup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kanbas/Account/Signup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kanbas/Courses/Assignments/AssignmentControl.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kanbas/Courses/Assignments/AssignmentControl.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kanbas/Courses/Assignments/Editor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kanbas/Courses/Assignments/Editor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kanbas/Courses/Assignments/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kanbas/Courses/Assignments/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kanbas/Dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kanbas/Dashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kanbas/Database/assignments.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kanbas/Database/assignments.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kanbas/Database/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kanbas/Database/users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kanbas/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kanbas/Navigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kanbas/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kanbas/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
