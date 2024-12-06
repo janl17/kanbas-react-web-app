@@ -4,7 +4,7 @@ export default function Destructing() {
     // const name = person.name
     // const age = person.age
     const numbers = ["one", "two", "three"];
-    const [ first, second, third ] = numbers;
+    const [first, second, third] = numbers;
     return (
         <div id="wd-destructing">
             <h2>Destructing</h2>
@@ -14,7 +14,7 @@ export default function Destructing() {
             name = {name}<br />
             age = {age}
             <h3>Array Destructing</h3>
-            const [first, second, third] = ["one","two","three"]<br/><br/>
+            const [first, second, third] = ["one","two","three"]<br /><br />
             first = {first}<br />
             second = {second}<br />
             third = {third}<hr />

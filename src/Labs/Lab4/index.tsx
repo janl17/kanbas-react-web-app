@@ -1,27 +1,29 @@
-import PassingFunctions from "./PassingFunctions";
-import PassingDataOnEvent from "./PassingDataOnEvent";
-import ClickEvent from "./ClickEvent";
-import EventObject from "./EventObject";
-import Counter from "./Counter";
-import BooleanStateVariables from "./BooleanStateVariables";
-import StringStateVariables from "./StringStateVariables";
-import DateStateVariable from "./DateStateVariable";
-import ObjectStateVariable from "./ObjectStateVariable";
 import ArrayStateVariable from "./ArrayStateVariable";
+import BooleanStateVariables from "./BooleanStateVariables";
+import ClickEvent from "./ClickEvent";
+import Counter from "./Counter";
+import DateStateVariable from "./DateStateVariable";
+import EventObject from "./EventObject";
+import ObjectStateVariable from "./ObjectStateVariable";
 import ParentStateComponent from "./ParentStateComponent";
+import PassingDataOnEvent from "./PassingDataOnEvent";
+import PassingFunctions from "./PassingFunctions";
 import ReduxExamples from "./ReduxExamples";
-
+import TodoList from "./ReduxExamples/todos/TodoList";
+import StringStateVariables from "./StringStateVariables";
 
 export default function Lab4() {
     function sayHello() {
         alert("Hello");
     }
 
+
     return (
-        <div id="wd-passing-functions">
-            <h2>Lab 4</h2>
-            <ClickEvent/>
-            <PassingDataOnEvent/>
+        <div>
+
+            <h1>Lab 4</h1>
+            <ClickEvent />
+            <PassingDataOnEvent />
             <PassingFunctions theFunction={sayHello}/>
             <EventObject/>
             <Counter/>
@@ -32,7 +34,9 @@ export default function Lab4() {
             <ArrayStateVariable/>
             <ParentStateComponent/>
             <ReduxExamples/>
+            <TodoList/>
         </div>
-    );
-}
 
+    )
+
+}
